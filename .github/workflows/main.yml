@@ -17,7 +17,7 @@ jobs:
         with:
           path: devops
       - name: Build
-        run: devops/scripts/build.sh
+        run: sudo devops/scripts/build.sh
       - name: Check Licenses
-        run: devops/scripts/validate-licenses.sh
+        run: sudo devops/scripts/validate-licenses.sh
      
