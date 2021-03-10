@@ -18,14 +18,6 @@ jobs:
           path: devops
       - name: Build
         run: devops/scripts/build.sh
-        env:
-          NESTJS_APP: true
       - name: Check Licenses
         run: devops/scripts/validate-licenses.sh
-        env:
-          NESTJS_APP: true
-      - name: Run Unit Tests
-        run: devops/scripts/unit-tests.sh
-        env:
-          NESTJS_APP: true
      
