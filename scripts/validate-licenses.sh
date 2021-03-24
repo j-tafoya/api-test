@@ -37,7 +37,7 @@ if [ $lines > 1 ]
 then
     unapproved=$(print_unapproved)
     message="$lines packages have licenses that are not in the approved list. Please see the workflow log to see the list of dependencies with unapproved licenses to investigate and add them to the approved list if compatible with MIT or remove the dependency\n$unapproved"
-    echo -e "::warning file=Validate Licenses::$message"
+    echo -e "::warning file=validate-licenses.sh::$message"
     exit 0
 else
     echo "All direct dependencies have approved licenses"
