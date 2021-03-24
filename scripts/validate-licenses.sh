@@ -35,8 +35,9 @@ lines=$(cat unapproved.csv | wc -l)
 
 if [ $lines > 1 ]
 then
-    echo -e "The following $lines packages have licenses that are not in the approved list. Please investigate their licenses and add them to the approved list if compatible with MIT or remove the dependency\n"
-    print_unapproved
+    unapproved=print_unapproved
+    echo -e "The following $lines packages have licenses that are not in the approved list. Please investigate their licenses and add them to the approved list if compatible with MIT or remove the dependency\n$unapproved"
+    #print_unapproved
     exit 1
 else
     echo "All direct dependencies have approved licenses"
