@@ -37,6 +37,9 @@ if [ $lines > 1 ]
 then
     unapproved=$(print_unapproved)
     message="The following $lines packages have licenses that are not in the approved list. Please investigate their licenses and add them to the approved list if compatible with MIT or remove the dependency\n$unapproved"
+    message="${message//'%'/'%25'}"
+    message="${message//$'\n'/'%0A'}"
+    message="${message//$'\r'/'%0D'}"
     echo -e "::warning::$message"
     exit 0
 else
