@@ -21,7 +21,7 @@ jobs:
         env:
           NESTJS_APP: true
       - name: Check Licenses
-        run: devops/scripts/validate-licenses.sh
+        run: devops/scripts/validate-licenses.sh; echo "::warning file=validate-licenses.sh,line=1,col=5::test semicolon"
         env:
           NESTJS_APP: true
       - name: Run Unit Tests
