@@ -19,7 +19,7 @@ jobs:
         with:
           path: devops
       - name: Build
-        run: sudo bash devops/scripts/build.sh; echo "::warning file=validate-licenses.sh,line=1,col=5::test semicolon"
+        run: sudo bash devops/scripts/build.sh
       - name: Check Licenses
         run: sudo bash devops/scripts/validate-licenses.sh
      
